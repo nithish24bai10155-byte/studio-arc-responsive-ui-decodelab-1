@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Arc — Digital Architecture</title>
+  <meta name="description" content="A responsive frontend interface built with semantic HTML5, CSS Grid, Flexbox and vanilla JavaScript.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#top" class="logo" aria-label="Studio Arc home">
+        <span class="logo-mark" aria-hidden="true">⌂</span>
+        <span class="logo-text">Studio&nbsp;Arc</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact" class="nav-cta">Start a project</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-grid">
+        <p class="eyebrow">01 — Discovery</p>
+        <h1 id="hero-heading">We draft the blueprint<br>before we lay a single pixel.</h1>
+        <p class="hero-copy">
+          Studio Arc designs and builds responsive digital interfaces —
+          measured like architecture, tested like structure, and finished
+          with warmth instead of sterile tech gloss.
+        </p>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-primary">See the work</a>
+          <a href="#contact" class="btn btn-ghost">Get a quote</a>
+        </div>
+      </div>
+      <div class="hero-blueprint" aria-hidden="true">
+        <div class="blueprint-frame">
+          <span class="dim dim-top">1080px</span>
+          <span class="dim dim-left">1920px</span>
+          <div class="blueprint-box box-header">header</div>
+          <div class="blueprint-box box-main">main</div>
+          <div class="blueprint-box box-side">side</div>
+          <div class="blueprint-box box-footer">footer</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS / TRUST STRIP -->
+    <section class="stats" aria-label="Studio metrics">
+      <div class="stat">
+        <span class="stat-num" data-count="120">0</span>
+        <span class="stat-label">Interfaces shipped</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-count="98">0</span>
+        <span class="stat-label">% Lighthouse accessibility avg.</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-count="3">0</span>
+        <span class="stat-label">Breakpoints, mastered</span>
+      </div>
+    </section>
+
+    <!-- WORK / ARTICLES -->
+    <section id="work" class="work" aria-labelledby="work-heading">
+      <h2 id="work-heading"><span class="eyebrow">02 — Selected work</span>Built to hold up at every size</h2>
+
+      <div class="work-grid">
+        <article class="work-card">
+          <div class="work-thumb thumb-a" aria-hidden="true"></div>
+          <h3>Fieldnote</h3>
+          <p>A mobile-first journaling app interface with fluid type and a single-column-first layout that expands into a two-pane desktop view.</p>
+          <span class="tag">HTML · CSS Grid · JS</span>
+        </article>
+
+        <article class="work-card">
+          <div class="work-thumb thumb-b" aria-hidden="true"></div>
+          <h3>Harbor Dashboard</h3>
+          <p>A data dashboard shell using CSS Grid for the macro layout and Flexbox for every card's internal alignment.</p>
+          <span class="tag">CSS Grid · Flexbox</span>
+        </article>
+
+        <article class="work-card">
+          <div class="work-thumb thumb-c" aria-hidden="true"></div>
+          <h3>Northline Storefront</h3>
+          <p>A clean, accessible storefront front-end with semantic landmarks that read cleanly for screen readers and search engines alike.</p>
+          <span class="tag">Semantic HTML5</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="process" aria-labelledby="process-heading">
+      <h2 id="process-heading"><span class="eyebrow">03 — Process</span>From blueprint to build</h2>
+      <ol class="process-steps">
+        <li><span class="step-num">01</span><h3>Discovery</h3><p>Define the "how might we" and the real constraints of the brief.</p></li>
+        <li><span class="step-num">02</span><h3>Wireframe</h3><p>Grayscale, mobile-first. If it doesn't work without color, color won't fix it.</p></li>
+        <li><span class="step-num">03</span><h3>Semantics</h3><p>Header, nav, main, article, footer — the right landmark for the right job.</p></li>
+        <li><span class="step-num">04</span><h3>Style</h3><p>CSS Grid for structure, Flexbox for components, a restrained 2025 palette.</p></li>
+        <li><span class="step-num">05</span><h3>Logic</h3><p>Light, purposeful JavaScript for state and interactivity — nothing more.</p></li>
+        <li><span class="step-num">06</span><h3>Audit</h3><p>Check layout shift, load speed, and accessibility before calling it done.</p></li>
+      </ol>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about" aria-labelledby="about-heading">
+      <div class="about-copy">
+        <h2 id="about-heading"><span class="eyebrow">04 — About</span>Frameworks come later. Fundamentals come first.</h2>
+        <p>
+          This interface was hand-built with plain HTML, CSS and JavaScript —
+          no framework, no build step — to prove that a truly responsive layout
+          starts with structure and logic, not a component library.
+        </p>
+      </div>
+      <div class="about-toggle-demo">
+        <h3>Try the theme toggle</h3>
+        <p>A small piece of interactive state, wired with vanilla JS.</p>
+        <button id="themeToggle" class="btn btn-primary" aria-pressed="false">
+          Switch to dark mode
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark" aria-hidden="true">⌂</span>
+        <span>Studio Arc</span>
+        <p>Responsive interfaces, built on fundamentals.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <div>
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@studioarc.dev">hello@studioarc.dev</a></li>
+            <li><a href="tel:+910000000000">+91 00000 00000</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <p class="footer-meta">© <span id="year"></span> Studio Arc. Built with HTML, CSS &amp; JavaScript — no frameworks.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
